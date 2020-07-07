@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 673748443221076781}
   - component: {fileID: 3250484231490419042}
-  - component: {fileID: -5548915079431984511}
+  - component: {fileID: -5652522550485714007}
   m_Layer: 0
   m_Name: healthPickup
   m_TagString: Health Pickup
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 4727607912722363594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -83,8 +83,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &-5548915079431984511
-BoxCollider2D:
+--- !u!60 &-5652522550485714007
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -106,6 +106,13 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.25, y: 0.5}
+      - {x: -0.5, y: 0.25}
+      - {x: -0.5, y: -0.4375}
+      - {x: -0.375, y: -0.5}
+      - {x: 0.375, y: -0.5}
+      - {x: 0.5, y: -0.3125}
+      - {x: 0.5, y: 0.375}
+      - {x: 0.25, y: 0.5}

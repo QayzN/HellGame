@@ -7,6 +7,9 @@ TagManager:
   - Devil
   - Ground
   - Health Pickup
+  - Ghost
+  - Sword
+  - Grim
   layers:
   - Default
   - TransparentFX
