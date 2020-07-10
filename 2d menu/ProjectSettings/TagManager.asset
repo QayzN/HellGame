@@ -10,6 +10,8 @@ TagManager:
   - Ghost
   - Sword
   - Grim
+  - DeathTrigger
+  - SpawnerLocation
   layers:
   - Default
   - TransparentFX

@@ -8,8 +8,8 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
 
-        SceneManager.UnloadSceneAsync("Menu");
-        SceneManager.LoadSceneAsync("Level1");
+        //SceneManager.UnloadSceneAsync("Menu");
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void QuitGame()

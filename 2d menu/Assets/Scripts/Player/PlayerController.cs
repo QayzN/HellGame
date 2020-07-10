@@ -103,7 +103,9 @@ public class PlayerController : MonoBehaviour
     //GHOSTSPAWNER THING
     public GameObject ghostSpawner;
 
+    //public AudioSource cameraAudio;
 
+    //public Camera camera1;
 
     //AUDIO
 
@@ -316,6 +318,8 @@ public class PlayerController : MonoBehaviour
             if (isColliding) return;
             isColliding = true;
             timerOn = false;
+            //cameraAudio.Stop();
+            //camera1.GetComponent<CameraFollow>().WinGame();
             ParticleSystem winExplosion = Instantiate(winParticles, gameObject.transform.position, transform.rotation);
             Destroy(winExplosion, 10);
             winScreen.SetActive(true);
@@ -342,6 +346,14 @@ public class PlayerController : MonoBehaviour
             //(playerDamageParticle, 2f);
            //ouchSound.Play();
 
+        }
+        if (col.tag == "DeathTrigger")
+        {
+            GameObject playerDamExplosion = Instantiate(playerDamageParticle, transform.position, transform.rotation);
+            health = 0;
+            Time.timeScale = 0;
+            Destroy(playerDamExplosion, 4f);
+            
         }
     }
 

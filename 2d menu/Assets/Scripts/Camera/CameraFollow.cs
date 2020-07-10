@@ -11,15 +11,15 @@ public class CameraFollow : MonoBehaviour
     public Vector3 offset;
 
 
-    public AudioSource audioSource;
-    public float duration;
-    public float targetVolume;
+    //public AudioSource audioSource;
+    //public float duration;
+    //public float targetVolume;
 
 
 
     private void Start()
     {
-        StartCoroutine(FadeAudioSource.StartFade(audioSource, duration, targetVolume));
+        //StartCoroutine(FadeAudioSource.StartFade(audioSource, duration, targetVolume));
     }
 
     private void LateUpdate()
@@ -33,23 +33,25 @@ public class CameraFollow : MonoBehaviour
 
 
 
-    public static class FadeAudioSource
-    {
+    //public static class FadeAudioSource
+    //{
+    //
+    //    public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)
+    //    {
+    //        float currentTime = 0;
+    //        float start = audioSource.volume;
+    //
+    //        while (currentTime < duration)
+    //        {
+    //            currentTime += Time.deltaTime;
+    //            audioSource.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
+    //            yield return null;
+    //        }
+    //       yield break;
+    //   }
+    //}
 
-        public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)
-        {
-            float currentTime = 0;
-            float start = audioSource.volume;
 
-            while (currentTime < duration)
-            {
-                currentTime += Time.deltaTime;
-                audioSource.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
-                yield return null;
-            }
-            yield break;
-        }
-    }
 
 
 
