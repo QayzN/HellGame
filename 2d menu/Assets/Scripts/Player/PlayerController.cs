@@ -120,6 +120,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       
+
         Time.timeScale = 1;
 
 
@@ -161,7 +163,6 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        
         moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         
@@ -355,6 +356,15 @@ public class PlayerController : MonoBehaviour
             Destroy(playerDamExplosion, 4f);
             
         }
+        if (col.tag == "BossGhost")
+        {
+            if (isColliding) return;
+            Debug.Log("BOSSGHOST SMASH");
+            isColliding = true;
+            health = 0;
+            GameObject playerDamExplosion = Instantiate(playerDamageParticle, transform.position, transform.rotation);
+            Destroy(playerDamExplosion, 4f);
+        }
     }
 
     //HEALTH
@@ -398,5 +408,15 @@ public class PlayerController : MonoBehaviour
         //}
     }
 
+    //private IEnumerator Pause(int p)
+    //{
+    ////    Time.timeScale = 0.1f;
+    //    float pauseEndTime = Time.realtimeSinceStartup + p;
+    //    while (Time.realtimeSinceStartup < pauseEndTime)
+    ////    {
+    //        yield return 0;
+    //    }
+    //    Time.timeScale = 1;
+    //}
 
 }

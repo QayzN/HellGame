@@ -12,6 +12,7 @@ TagManager:
   - Grim
   - DeathTrigger
   - SpawnerLocation
+  - BossGhost
   layers:
   - Default
   - TransparentFX

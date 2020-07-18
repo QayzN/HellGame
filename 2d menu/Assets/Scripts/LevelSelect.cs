@@ -32,6 +32,12 @@ public class LevelSelect : MonoBehaviour
         SceneManager.LoadSceneAsync("Tutorial");
         Debug.Log("button pushed nigga");
     }
+    public void LevelBossRun()
+    {
+        //SceneManager.UnloadSceneAsync("Menu");
+        SceneManager.LoadSceneAsync("LevelBoss1");
+        Debug.Log("button pushed nigga");
+    }
     public void Quit()
     {
 
